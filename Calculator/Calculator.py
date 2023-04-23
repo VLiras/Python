@@ -15,6 +15,9 @@ def do (x, y, o):
     }
     result = select.get(o, "Invalid operator")
     print(result)
+def toSquared (number):
+    result = pow(number,2) # -> Elevar al cuadrado
+    result = math.sqrt(number,2) # -> Raiz Cuadrada
 
 def numbers(first, second):
     quest = input('Desea sumar, restar, multiplicar o dividir:').lower()
