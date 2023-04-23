@@ -14,4 +14,4 @@ Proximamente se añadira...
 **Aclaracion: este solo es un proyecto de practica para principiantes.**
 
 ### Descarga 
-Si quieres probar esta calculadora puedes simplemente copiar el codigo o descargarlo desde [ACA] (https://github.com/VLiras/Python.git)
+Si quieres probar esta calculadora puedes simplemente copiar el codigo o descargarlo desde [ ACA ](https://github.com/VLiras/Python.git)
