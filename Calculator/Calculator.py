@@ -1,3 +1,5 @@
+from Square import toSquared # => Importando una funcion
+from Square import root
 import math
 a = int(input('Ingrese un numero a: '))
 b = int(input('Ingrese otro numero: ')) 
@@ -15,20 +17,24 @@ def do (x, y, o):
     }
     result = select.get(o, "Invalid operator")
     print(result)
-def toSquared (number):
-    result = pow(number,2) # -> Elevar al cuadrado
-    result = math.sqrt(number,2) # -> Raiz Cuadrada
+
+def basic (req,x, y):
+    if((req != 's') and (req != 'r') and (req != 'm') and (req != 'd')): print('Error!')
+    if(req == 's'):
+        do(x,y,'+')
+    elif(req == 'r'):
+        do(x,y,'-')
+    elif(req == 'm'):
+        do(x,y,'*')
+    else: do(x,y,'/')
 
 def numbers(first, second):
-    quest = input('Desea sumar, restar, multiplicar o dividir:').lower()
-    if((quest != 's') and (quest != 'r') and (quest != 'm') and (quest != 'd')): print('Error!')
-    if(quest == 's'):
-        do(first,second,'+')
-    elif(quest == 'r'):
-        do(first,second,'-')
-    elif(quest == 'm'):
-        do(first,second,'*')
-    else: do(first,second,'/')
+    quest = input('Que operacion desea hacer?: ').lower()
+    basic(quest)
+    if(quest == 'n'): 
+        setNumber = input("Con cual numero?: ").lower()
+        if ((setNumber == 'a')):toSquared(a)
+        elif(setNumber == 'b') : toSquared(b)
     compare = input('Desea comparar si son iguales? ').lower()
     if(compare == 'y'):equal(first,second)
     else: print('Ok, finishing')
