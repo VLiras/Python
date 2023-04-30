@@ -19,5 +19,4 @@ def guess_game ():
 start = input('Desea comenzar el juego: ').lower()
 if((start == 'si') or (start == 'ok')): guess_game()
 
-
     

@@ -1,6 +1,6 @@
 import random
 import time
-# number = random.randint(1,10)
+# number = random.randint(1,3)
 # print(number)
 def pair (value) :
     x = 1
@@ -12,18 +12,15 @@ def pair (value) :
             print('El numero es par')
         else: print('El numero es impar')
         x += 1
+def near_number (value , range):
+    nearMinor = value - 2
+    nearMajor = value + 2
+    print(nearMinor)
+    print(nearMajor)
 def hint (number):
-    return pair(number)
-
-def mi_funcion():
-    print("¡Hola!")
-
+    return pair(number), near_number(number)
 
 # while x <= 1:
 #     time.sleep(2) # => 5 segundos
 #     mi_funcion()
 #     x += 1
-
-    
-
-
