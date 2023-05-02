@@ -1,6 +1,5 @@
 from Square import toSquared # => Importando una funcion
 from Square import root
-import math
 a = int(input('Ingrese un numero a: '))
 b = int(input('Ingrese otro numero: ')) 
 # En el input() todo dato que ingrese lo toma como un string
@@ -30,11 +29,10 @@ def basic (req,x, y):
 
 def numbers(first, second):
     quest = input('Que operacion desea hacer?: ').lower()
-    basic(quest)
+    if (quest == 's') or (quest == 'r') or (quest == 'm') or (quest == 'd'): 
+        basic(quest, a, b)
     if(quest == 'n'): 
-        setNumber = input("Con cual numero?: ").lower()
-        if ((setNumber == 'a')):toSquared(a)
-        elif(setNumber == 'b') : toSquared(b)
+        toSquared(a)
     compare = input('Desea comparar si son iguales? ').lower()
     if(compare == 'y'):equal(first,second)
     else: print('Ok, finishing')
