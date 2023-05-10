@@ -1,7 +1,6 @@
 from Square import toSquared # => Importando una funcion
 from Square import root
-a = int(input('Ingrese un numero a: '))
-b = int(input('Ingrese otro numero: ')) 
+ 
 # En el input() todo dato que ingrese lo toma como un string
 def equal (x, y):
     if(x > y): print('a es mayor que b')
@@ -28,6 +27,8 @@ def basic (req,x, y):
     else: do(x,y,'/')
 
 def numbers(first, second):
+    a: int = input('Ingrese un numero a: ')
+    b: int = input('Ingrese otro numero: ')
     quest = input('Que operacion desea hacer?: ').lower()
     if (quest == 's') or (quest == 'r') or (quest == 'm') or (quest == 'd'): 
         basic(quest, a, b)
@@ -36,4 +37,4 @@ def numbers(first, second):
     compare = input('Desea comparar si son iguales? ').lower()
     if(compare == 'y'):equal(first,second)
     else: print('Ok, finishing')
-numbers(a, b)
+# numbers(a, b)
