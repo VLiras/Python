@@ -6,18 +6,28 @@ lowerAbc = [i.lower() for i in abecedary]
 def getRandom (min, max):
     ans = random.randint(min, max)
     return ans
-    
+
+def setArray (loop, array):
+    for i in range(0, loop):
+        data = getRandom(0, len(array))
+        pass_data = array[data]
+
+
 subPassword = []
 def getPassword ():
     limit = int(input('Ingrese los caracteres maximos de nu nueva contraseña: '))
     space = ''
     for i in range(0, limit):
-        letters = getRandom(0,len(abecedary))
-        pass_Upper = abecedary[letters]
-        subPassword.append(pass_Upper)
+        upper = getRandom(0,len(abecedary))
+        lower = getRandom(0,len(abecedary))
+        naturals = getRandom(0,9) 
+        pass_Upper = abecedary[upper]
+        pass_Lower = lowerAbc[lower]
+        pass_Natural = numbers[naturals]
+        subPassword.append(pass_Upper+pass_Lower+str(pass_Natural))
     password = space.join(subPassword)
     return print(password)
-getPassword()
+# getPassword()
 
 
 
